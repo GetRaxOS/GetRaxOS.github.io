@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-  site: 'https://GetRaxOS.github.io',
+  site: 'https://getraxos.github.io',
 })
