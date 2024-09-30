@@ -1,0 +1,132 @@
+---
+import GroupFooterNav from "../blocks/GroupFooterNav.astro";
+import Container from "../shared/Container.astro";
+import FooterNav from "../shared/FooterNav.astro";
+import Paragraph from "../shared/Paragraph.astro";
+const footerNav1 = [
+    {
+        itemText:"Marketing",
+        itemLink:"#"
+    },
+    {
+        itemText:"Analylitics",
+        itemLink:"#"
+    },
+    {
+        itemText:"Commerce",
+        itemLink:"#"
+    },
+    {
+        itemText:"Insights",
+        itemLink:"#"
+    }
+]
+
+const footerSupport = [
+    {
+        itemText:"FAQ",
+        itemLink:"#"
+    },
+    {
+        itemText:"Install Guide",
+        itemLink:"#"
+    },
+]
+
+const footerLegal = [
+    {
+        itemText:"Discord Server",
+        itemLink:"/#"
+    },
+    {
+        itemText:"Github",
+        itemLink:"#"
+    },
+    {
+        itemText:"Robux Donations",
+        itemLink:"#"
+    }
+]
+---
+<div class="mt-16"></div>
+<footer class="relative  bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-28 rounded-t-3xl">
+    <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+            <span
+              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
+            ></span>
+            <span
+              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+            ></span>
+            <span
+              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+            ></span>
+          </div>
+      </div>
+
+      <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+        <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+            <span
+              class="absolute w-16 h-16 -top-1 -right-1 bg-green-500 rounded-md rotate-45"
+            ></span>
+            <span
+              class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+            ></span>
+            <span
+              class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+            ></span>
+          </div>
+      </div>
+    <Container className="pb-8 relative overflow-auto">
+        
+        <span class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 blur-2xl opacity-20 w-24 h-16 sm:w-48 sm:h-36 rounded-full rotate-12 skew-x-6 bg-primary"></span>
+        <div class="grid grid-cols-2 lg:grid-cols-3 lg:items-stretch gap-8 relative">
+            <div class="col-span-2 lg:col-span-1 h-auto flex flex-col">
+                <div class="h-full">
+                    <a href="#" class="relative flex items-left gap-3">
+                        <div class="relative w-0 h-0 overflow-auto flex rounded-xl">
+                        </div>
+                        <div class="inline-flex text-lg font-semibold text-heading-1">
+                        Rax>
+                        </div>
+                    </a>
+                    <Paragraph className={"mt-8"}>
+                        ‎ ‎ ‎Making Windows great again.
+                    </Paragraph>
+                </div>
+
+                <!-- social links -->
+                <div class="min-h-max flex items-center gap-4 text-heading-3 mt-8">
+                    <a href="#" class="transition hover:text-heading-1 hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-9 h-5" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        <span class="sr-only">social link</span>
+                    </a>
+                </div>
+            </div>
+
+            <GroupFooterNav>
+
+            </GroupFooterNav>
+
+            <GroupFooterNav>
+                <FooterNav title={"Help"} navItems={footerSupport}/>
+                <FooterNav title={"Misc"} navItems={footerLegal}/>
+            </GroupFooterNav>
+
+        </div>
+    </Container>
+    <div class=" bg-gradient-to-tl from-box-bg py-2 relative">
+        <Container>
+            <div class="flex justify-between items-center gap-10 md:text-lg text-heading-3">
+                <div>
+                    &copy; <span id="year"></span> Rax>. All rights reserved.
+                </div>
+                <div>
+                    Made by Fuze
+                </div>
+            </div>
+        </Container>
+    </div>
+</footer>
